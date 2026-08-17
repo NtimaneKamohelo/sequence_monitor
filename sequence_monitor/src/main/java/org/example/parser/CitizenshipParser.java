@@ -30,20 +30,26 @@ public class CitizenshipParser {
      */
     private static final int REFUGEE_CODE = 2;
 
+    private static final int CITIZENSHIP_INDEX = 10;
+
+
     /**
      * Extracts the citizenship code from a complete
      * South African ID number and maps it to a Citizenship enum
      *
      * @param idNumber 13-digit RSA ID number.
-     * @return corresponding Citizenship value
+     * @return corresponding Citizenship classification
      * @throws IllegalArgumentException when the ID is invalid or the citizenship code is unsupported.
      */
     public Citizenship parse(String idNumber){
         validatedIdNumber(idNumber);
-        char citizenshipCharacter = idNumber.charAt(10);
+        char citizenshipCharacter = idNumber.charAt(
+                CITIZENSHIP_INDEX
+        );
 
-        int citizenshipCode = parseCitizenshipCode(
-                citizenshipCharacter
+        int citizenshipCode = Character.digit(
+                citizenshipCharacter,
+                10
         );
 
         return  determineCitizenship(citizenshipCode);
@@ -69,7 +75,7 @@ public class CitizenshipParser {
 
     /**
      * Converts the citizenship character into an integer
-     */
+
     private int parseCitizenshipCode(char citizenshipCharacter){
         if (!Character.isDigit(citizenshipCharacter)){
             throw new IllegalArgumentException(
@@ -77,7 +83,7 @@ public class CitizenshipParser {
             );
         }
         return Character.digit(citizenshipCharacter,10);
-    }
+    }*/
 
     /**
      * maps the numeric citizenship code to the domain enum
