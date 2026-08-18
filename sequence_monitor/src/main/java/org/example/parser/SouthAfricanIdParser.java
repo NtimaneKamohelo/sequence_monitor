@@ -6,6 +6,7 @@ import org.example.enums.Gender;
 import org.example.util.CenturyResolver;
 import org.example.validation.LuhnValidator;
 import org.example.validation.RegexValidator;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -14,7 +15,7 @@ import java.util.PrimitiveIterator;
 /**
  * Main facade responsible for parsing and structurally
  * validating RSA ID number.
- *
+ *                           YYMMDD
  * Processing sequence:
  *
  * 1. Regex validation
@@ -27,7 +28,7 @@ import java.util.PrimitiveIterator;
  * 8. ParsedIdentity creation
  *
  */
-
+@Component
 public class SouthAfricanIdParser {
 
     private static final int OBSOLETE_DIGIT_INDEX = 11;

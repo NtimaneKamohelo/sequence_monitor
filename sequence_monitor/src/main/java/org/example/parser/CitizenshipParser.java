@@ -1,6 +1,7 @@
 package org.example.parser;
 
 import org.example.enums.Citizenship;
+import org.springframework.stereotype.Component;
 
 /**
  * Responsible for determining the citizenship/residency
@@ -12,7 +13,7 @@ import org.example.enums.Citizenship;
  *             ^
  *             Citizenship
  */
-
+@Component
 public class CitizenshipParser {
 
     /**

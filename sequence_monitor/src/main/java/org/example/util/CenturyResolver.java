@@ -1,7 +1,10 @@
 package org.example.util;
 
+import org.springframework.stereotype.Component;
+
 import java.time.Year;
 
+@Component
 public class CenturyResolver {
 
     public int centuryResolver(int twoDigitYear) {

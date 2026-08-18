@@ -1,7 +1,10 @@
 package org.example.validation;
 
+import org.springframework.stereotype.Component;
+
 import java.util.regex.Pattern;
 
+@Component
 public class RegexValidator {
 
     private static final Pattern SA_ID_PATTERN = Pattern.compile("^\\d{13}$");

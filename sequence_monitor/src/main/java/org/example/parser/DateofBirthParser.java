@@ -1,6 +1,7 @@
 package org.example.parser;
 
 import org.example.util.CenturyResolver;
+import org.springframework.stereotype.Component;
 
 import java.time.DateTimeException;
 import java.time.LocalDate;
@@ -18,7 +19,7 @@ import java.time.LocalDate;
  *
  * 1990-03-15
  */
-
+@Component
 public class DateofBirthParser {
 
     private static final int DOB_START_INDEX = 0;

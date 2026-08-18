@@ -1,5 +1,7 @@
 package org.example.validation;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Validates the checksum digit of a South African
  * ID number using Luhn Algorithm
@@ -7,7 +9,7 @@ package org.example.validation;
  * The RSA ID Contains:
  * 12 Data Digits + 1 checksum digit
  */
-
+@Component
 public class LuhnValidator {
     private static final int ID_LENGTH = 13;
 

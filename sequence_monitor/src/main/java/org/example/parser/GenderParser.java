@@ -1,6 +1,7 @@
 package org.example.parser;
 
 import org.example.enums.Gender;
+import org.springframework.stereotype.Component;
 
 /**
  * Responsible for determining gender from the SSSS
@@ -15,6 +16,7 @@ import org.example.enums.Gender;
  * 5000 - 9999 -> Male
  */
 
+@Component
 public class GenderParser {
 
     private static final int GENDER_START_INDEX = 6;
