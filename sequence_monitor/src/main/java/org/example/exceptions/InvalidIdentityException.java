@@ -1,6 +1,9 @@
 package org.example.exceptions;
 
-public class InvalidIdentityException {
-    public InvalidIdentityException(String s) {
+public class InvalidIdentityException extends RuntimeException {
+
+    public InvalidIdentityException(String message) {
+        super(message);
     }
+
 }
