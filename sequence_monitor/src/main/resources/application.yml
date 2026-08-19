@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: sequence_monitor
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/sequence_monitor
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:Ntimane200}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+    show-sql: false
+
+    properties:
+      hibernate:
+        format_sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
+
+  endpoint:
+    health:
+      show-details: never
