@@ -1,5 +1,7 @@
 package org.example.domain;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.example.enums.Citizenship;
 import org.example.enums.Gender;
 
@@ -13,6 +15,8 @@ import java.util.Objects;
  * No Spring, JPA, HTTP, database logic.
  */
 
+@Setter
+@Getter
 public class ParsedIdentity {
 
     private final String idNumber;

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
 
 @RestController
 @RequestMapping("/api/v1/identities")
@@ -36,7 +37,7 @@ public class IdentityController {
             @RequestBody
             IdentityParserRequest request
     ) {
-        ParsedIdentity parsedIdentity = identityService.parser(
+        ParsedIdentity parsedIdentity = identityService.parserAndRegister(
                 request.getIdNumber()
         );
 

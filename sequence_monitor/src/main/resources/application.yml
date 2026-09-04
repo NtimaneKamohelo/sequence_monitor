@@ -30,3 +30,7 @@ management:
   endpoint:
     health:
       show-details: never
+
+identity:
+  hash:
+    secret: ${IDENTITY_HASH_SECRET}
