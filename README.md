@@ -1,4 +1,4 @@
-##South African ID Validator
+# South African ID Validator
 
 A secure Spring Boot REST API for validating and parsing South African Identity Document (ID) numbers into structured identity information.
 The application accepts a South African ID number, validates its structure and checksum, extracts information encoded within the number, and persists the resulting identity record in a MySQL database.
