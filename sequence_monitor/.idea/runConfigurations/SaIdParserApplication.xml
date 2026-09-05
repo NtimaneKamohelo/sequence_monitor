@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="SaIdParserApplication" type="Application" factoryName="Application">
+    <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../tools/java-jdk/jdk-21" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <envs>
+      <env name="IDENTITY_HASH_SECRET" value="nWIu3HYvoV+LG/TX4DNsN4MqyhFUfSwFAl0ppGy2KYs=" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="org.example.SaIdParserApplication" />
+    <module name="sequence_monitor" />
+    <option name="PASS_PARENT_ENVS" value="false" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

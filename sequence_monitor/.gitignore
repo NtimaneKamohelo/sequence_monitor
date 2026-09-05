@@ -37,6 +37,6 @@ build/
 ### Mac OS ###
 .DS_Store
 
-### YAML ###
-.application.yml
+### YML ###
+src/main/resources/application.yml
 /.metadata/
